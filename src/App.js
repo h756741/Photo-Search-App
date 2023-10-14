@@ -3,10 +3,9 @@ import { useState, useEffect, useRef } from 'react';
 import { createApi } from 'unsplash-js';
 import { debounce } from 'lodash';
 import {BounceLoader} from 'react-spinners';
-import { API_KEY } from './api'
 
 const unsplash = createApi({
-  accessKey: API_KEY
+  accessKey: process.env.REACT_APP_API_KEY
 });
 
 function App() {
